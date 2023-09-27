@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "dev:particle-clock": "vite packages/particle-clock",
-    "dev:vue3-demo1": "vite packages/vue-demo1",
+    "dev:vue3-demo1": "vite packages/vue-demo1 --host 0.0.0.0",
     "dev:vue3-demo2": "vite packages/vue-demo2",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --config .prettierrc --write './**/*.{js,ts,scss,css,json}'"
   },
   "private": "true",
   "license": "ISC",
@@ -15,6 +16,10 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/eslint-plugin": "^7.22.10",
+    "@ecomfe/eslint-config": "^8.0.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",

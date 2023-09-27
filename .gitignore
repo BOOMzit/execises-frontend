@@ -27,3 +27,4 @@ packages/*/.vscode
 
 pnpm-lock.yaml
 */pnpm-lock.yaml
+.vscode/extensions.json
