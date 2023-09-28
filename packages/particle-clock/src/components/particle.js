@@ -11,7 +11,7 @@ export default class Particle {
     const rad = (getRandom(0, 360) * Math.PI) / 180;
     this.x = cx + r * Math.cos(rad);
     this.y = cy + r * Math.sin(rad);
-    this.size = getRandom(2, 5) * devicePixelRatio;
+    this.size = getRandom(2 * devicePixelRatio, 7 * devicePixelRatio);
   }
 
   draw(ctx) {
@@ -22,7 +22,7 @@ export default class Particle {
   }
 
   moveTo(tx, ty) {
-    const duration = 500; //500ms的运动时间
+    const duration = 300; //500ms的运动时间
     const sx = this.x;
     const sy = this.y;
     const xSpeed = (tx - sx) / duration;
@@ -39,5 +39,6 @@ export default class Particle {
       }
       window.requestAnimationFrame(_moveTo);
     };
+    _moveTo();
   }
 }
